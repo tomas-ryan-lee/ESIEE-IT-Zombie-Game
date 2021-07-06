@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637611761380000000
+      ticks: 637611964740000000
     m_Hash: 816737023
   m_LockFileStatus:
     m_FilePath: /Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637611761380000000
+      ticks: 637611964740000000
     m_Hash: 1477377422
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
