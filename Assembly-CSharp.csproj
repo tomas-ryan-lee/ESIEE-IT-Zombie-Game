@@ -36,11 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayRandomSound.cs" />
-     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\LightFlicker.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
+     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -620,6 +620,9 @@
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -635,6 +638,9 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -646,12 +652,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
