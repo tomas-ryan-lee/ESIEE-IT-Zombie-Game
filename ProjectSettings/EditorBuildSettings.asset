@@ -10,5 +10,6 @@ EditorBuildSettings:
     guid: 2dbe3aa3f59231a4ba6c7c818410b662
   - enabled: 1
     path: Assets/Scenes/Level.unity
+    path: Assets/Scenes/LevelMax.unity
     guid: e48973d429a104950a1ea4cd112896aa
   m_configObjects: {}
