@@ -74,10 +74,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""651950c7-081d-4d74-bb93-d9ec32da4cca"",
-                    ""path"": ""<DualShockGamepad>/leftStick/left"",
+                    ""path"": ""<XInputController>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""KONIX;PS4"",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -85,10 +85,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""6ee3b058-3b80-44a2-b60b-ea0b2509b9a1"",
-                    ""path"": ""<DualShockGamepad>/leftStick/right"",
+                    ""path"": ""<XInputController>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -107,10 +107,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""43a03b01-2f3d-47bc-93a2-3cd43d1cbd3c"",
-                    ""path"": ""<DualShockGamepad>/leftStick/down"",
+                    ""path"": ""<XInputController>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -118,10 +118,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""74bdfeec-7674-4817-a2a4-7deb7db68571"",
-                    ""path"": ""<DualShockGamepad>/leftStick/up"",
+                    ""path"": ""<XInputController>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -140,10 +140,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""a29a8e6c-bcce-435a-b7d5-99868807ec95"",
-                    ""path"": ""<DualShockGamepad>/rightStick/left"",
+                    ""path"": ""<XInputController>/rightStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""TurnX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -151,10 +151,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""3bbbb85c-5abe-4403-a761-a2c0fb92ae6e"",
-                    ""path"": ""<DualShockGamepad>/rightStick/right"",
+                    ""path"": ""<XInputController>/rightStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""TurnX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -173,10 +173,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""1460a907-67f5-40cf-affc-28f11587af80"",
-                    ""path"": ""<DualShockGamepad>/rightStick/down"",
+                    ""path"": ""<XInputController>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""TurnY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -184,10 +184,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""587c975d-e462-4481-adb7-9394a788501a"",
-                    ""path"": ""<DualShockGamepad>/rightStick/up"",
+                    ""path"": ""<XInputController>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""PS4;KONIX"",
                     ""action"": ""TurnY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -195,7 +195,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4b930151-8e83-4c00-9101-ef856190c9a1"",
-                    ""path"": ""<DualShockGamepad>/leftShoulder"",
+                    ""path"": ""<XInputController>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PS4"",
