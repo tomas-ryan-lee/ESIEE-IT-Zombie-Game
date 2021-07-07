@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2013503539994956067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2952539944953416769}
+  m_Layer: 0
+  m_Name: BallSpawnPositionLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2952539944953416769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013503539994956067}
+  m_LocalRotation: {x: -0, y: -0.09996228, z: -0, w: 0.99499124}
+  m_LocalPosition: {x: -0.17399979, y: 1.317, z: 0.954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7362552211815006272}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -11.474, z: 0}
+--- !u!1 &6190577613176641438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900868297653663781}
+  m_Layer: 0
+  m_Name: BallSpawnPositionRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8900868297653663781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190577613176641438}
+  m_LocalRotation: {x: -0, y: 0.09996511, z: -0, w: 0.99499094}
+  m_LocalPosition: {x: 0.17399979, y: 1.317, z: 0.954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7362552211815006272}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 11.474, z: 0}
+--- !u!1 &7232890854256554999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7585300168448223803}
+  m_Layer: 0
+  m_Name: BallSpawnPositionFront
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7585300168448223803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232890854256554999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.317, z: 0.954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7362552211815006272}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7362552210390926795
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +185,7 @@ GameObject:
   - component: {fileID: 7362552211037659009}
   - component: {fileID: 7362552211037659008}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,6 +299,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7362552210390926784}
+  - {fileID: 7585300168448223803}
+  - {fileID: 8900868297653663781}
+  - {fileID: 2952539944953416769}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,6 +320,13 @@ MonoBehaviour:
   Speed: 10
   Dash: 50
   RotationSpeed: 180
+  m_BallPrefab: {fileID: 2672130610894766217, guid: 0e5a8a3f587785841b463685a65a5fa5, type: 3}
+  m_BallSpawnPositionFront: {fileID: 7585300168448223803}
+  m_BallSpawnPositionLeft: {fileID: 2952539944953416769}
+  m_BallSpawnPositionRight: {fileID: 8900868297653663781}
+  m_BallStartSpeed: 10
+  m_BallLifeDuration: 20
+  m_ShootingPeriod: 0
 --- !u!114 &7362552211815006273
 MonoBehaviour:
   m_ObjectHideFlags: 0
