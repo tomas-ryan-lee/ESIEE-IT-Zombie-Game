@@ -19,10 +19,12 @@ public class Spawner : MonoBehaviour
     }
 
     IEnumerator SpawnEnnemy(){
-        while(ennemyCount<10){
+        while(ennemyCount<12){
             Debug.Log(ennemyCount);
-            ennemyToSpawnClone[0]= Instantiate(ennemyToSpawnPrefab[0], spawnLocations[0].transform.position, Quaternion.Euler(0,1,0)) as GameObject;
-            ennemyCount += 1;
+            ennemyToSpawnClone[0]= Instantiate(ennemyToSpawnPrefab[1], spawnLocations[0].transform.position, Quaternion.Euler(0,1,0)) as GameObject;
+            ennemyToSpawnClone[0]= Instantiate(ennemyToSpawnPrefab[1], spawnLocations[1].transform.position, Quaternion.Euler(0,1,0)) as GameObject;
+            ennemyToSpawnClone[0]= Instantiate(ennemyToSpawnPrefab[0], spawnLocations[2].transform.position, Quaternion.Euler(0,1,0)) as GameObject;
+            ennemyCount += 3;
             yield return new WaitForSeconds(3);
         }
     }
