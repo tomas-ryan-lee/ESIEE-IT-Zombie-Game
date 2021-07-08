@@ -46,7 +46,6 @@
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\Spawner.cs" />
-     <Compile Include="Assets\GenerateEnnemy.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
      <Compile Include="Assets\Zombie.cs" />
      <None Include="Assets\Essential Horror Music Collection\README.txt" />
