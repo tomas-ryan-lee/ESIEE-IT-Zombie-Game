@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ChangeScenes.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayRandomSound.cs" />
      <Compile Include="Assets\Player\PlayerController.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\LightFlicker.cs" />
@@ -43,7 +44,9 @@
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
      <Compile Include="Assets\Player\PlayerInputAction.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
-     <Compile Include="Assets\Scripts\ChangeScenes.cs" />
+     <Compile Include="Assets\Sounds\Essential Horror Music Collection\_DEMO FILES_\Scripts\MusicNavigation.cs" />
+     <Compile Include="Assets\Scripts\RandomZombieSfx.cs" />
+     <None Include="Assets\Sounds\Essential Horror Music Collection\README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -265,6 +268,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -638,6 +644,9 @@
     <Reference Include="UnityEditor.UI">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InputSystem">
+        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -646,9 +655,6 @@
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-        <HintPath>/Users/kevinrifa/Documents/Coding_Factory/Gaming/Zombie Game/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
