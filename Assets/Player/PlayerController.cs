@@ -10,11 +10,46 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float RotationSpeed;
 
 
+    //ball
+    [SerializeField] GameObject m_BallPrefab;
+    [SerializeField] Transform m_BallSpawnPositionFront;
+    [SerializeField] Transform m_BallSpawnPositionLeft;
+    [SerializeField] Transform m_BallSpawnPositionRight;
+    [SerializeField] float m_BallStartSpeed;
+    [SerializeField] float m_BallLifeDuration;
+
+    [SerializeField] float m_ShootingPeriod;
+    float m_NextShootTime;
+
+
     bool PlayerDash = false;
     float L_AxisX, L_AxisY, R_AxisX, R_AxisY;
     Vector3 PlayerOrientation;
     Vector2 RightStickInput;
     Rigidbody rb;
+
+    void Shoot1Ball()
+    {
+        GameObject newBallGO = Instantiate(m_BallPrefab);
+        newBallGO.transform.position = m_BallSpawnPositionFront.position;
+        newBallGO.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionFront.forward * m_BallStartSpeed;
+        Destroy(newBallGO, m_BallLifeDuration);
+    }
+    void Shoot3Ball()
+    {
+        GameObject newBallGOFront = Instantiate(m_BallPrefab);
+        GameObject newBallGOLeft = Instantiate(m_BallPrefab);
+        GameObject newBallGORight = Instantiate(m_BallPrefab);
+        newBallGOFront.transform.position = m_BallSpawnPositionFront.position;
+        newBallGOLeft.transform.position = m_BallSpawnPositionLeft.position;
+        newBallGORight.transform.position = m_BallSpawnPositionRight.position;
+        newBallGOFront.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionFront.forward * m_BallStartSpeed;
+        newBallGOLeft.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionLeft.forward * m_BallStartSpeed;
+        newBallGORight.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionRight.forward * m_BallStartSpeed;
+        Destroy(newBallGOFront, m_BallLifeDuration);
+        Destroy(newBallGOLeft, m_BallLifeDuration);
+        Destroy(newBallGORight, m_BallLifeDuration);
+    }
 
 
 
@@ -77,18 +112,17 @@ public class PlayerController : MonoBehaviour
             Quaternion.FromToRotation(transform.up, Vector3.up) * rb.rotation,
             Time.fixedDeltaTime * 4);
 
-       float rotAngle = R_AxisX * RotationSpeed * Time.fixedDeltaTime;
-       Quaternion qRot = Quaternion.AngleAxis(rotAngle, transform.up);
+        Vector3 dirLook = new Vector3(RightStickInput.x, 0, RightStickInput.y).normalized;
+        float rotAngle = R_AxisX * RotationSpeed * Time.fixedDeltaTime;
+        Quaternion qRot = Quaternion.LookRotation(dirLook, transform.up);
 
 
         //synthèse
         Quaternion qNewOrientation = qRot * qSlightlyUpright;
-        rb.MoveRotation(qNewOrientation);
+        rb.MoveRotation(qRot);
 
         rb.AddForce(-rb.velocity, ForceMode.VelocityChange);
        rb.AddTorque(-rb.angularVelocity, ForceMode.VelocityChange);
-
-
 
     }
 
@@ -112,5 +146,26 @@ public class PlayerController : MonoBehaviour
     public void OnTurnY(InputValue val)
     {
         R_AxisY = val.Get<float>();
+    }
+    public void OnFire1()
+    {
+        // FIRE base
+        if ( Time.time > m_NextShootTime)
+        {
+            Shoot1Ball();
+            m_NextShootTime = Time.time + m_ShootingPeriod;
+        }
+
+    }
+
+    public void OnFire2()
+    {
+        // FIRE Shotgun
+        if ( Time.time > m_NextShootTime)
+        {
+            Shoot3Ball();
+            m_NextShootTime = Time.time + m_ShootingPeriod;
+        }
+
     }
 }
