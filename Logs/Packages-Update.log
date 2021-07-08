@@ -83,3 +83,12 @@ The following packages were updated:
   com.unity.test-framework from version 1.1.27 to 1.1.26
 The following packages were removed:
   com.unity.inputsystem@1.0.2
+
+=== Thu Jul  8 12:13:36 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.2d.sprite@1.0.0
+  com.unity.2d.tilemap@1.0.0
