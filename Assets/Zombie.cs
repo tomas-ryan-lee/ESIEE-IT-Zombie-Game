@@ -10,21 +10,23 @@ public class Zombie : MonoBehaviour
     public NavMeshAgent agent;
     Rigidbody rig;
     public GameObject[] players;
-    bool playerInRange;
     float AttackDistance = 1.5f;
-    float playerHealth = 100;
+    float TimerForNextAttack, Cooldown;
+    int targetHealth;
+    PlayerHealth pHealth;
     void Awake()
     {
         rig = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         players = GameObject.FindGameObjectsWithTag("Player");
         target = GetClosestEnemy(players).transform;
-        playerInRange = false;
+        Cooldown = 1;
+        TimerForNextAttack = Cooldown;
     }
-
     void FixedUpdate()
     {
-        if(target == null){
+        if (target == null)
+        {
             players = GameObject.FindGameObjectsWithTag("Player");
             target = GetClosestEnemy(players).transform;
         }
@@ -38,7 +40,15 @@ public class Zombie : MonoBehaviour
         else
         {
             // Attack the player
-            StartCoroutine(Attack());
+            if (TimerForNextAttack > 0)
+            {
+                TimerForNextAttack -= Time.deltaTime;
+            }
+            else if (TimerForNextAttack <= 0)
+            {
+                Attack();
+                TimerForNextAttack = Cooldown;
+            }
         }
     }
 
@@ -57,19 +67,19 @@ public class Zombie : MonoBehaviour
                 nearestTarget = potentialTarget;
             }
         }
+        pHealth = nearestTarget.GetComponent<PlayerHealth>();
         return nearestTarget;
     }
-    IEnumerator Attack()
+    void Attack()
     {
-        Debug.Log(playerHealth);
-        playerHealth -= 7;
-        if(playerHealth <= 0){
+        pHealth.TakeDamage(7);
+        if (targetHealth <= 0)
+        {
             // Player is destroyed, ennemy switch target
             Object.Destroy(target.gameObject);
             target = GetClosestEnemy(players).transform;
         }
-        Debug.Log(playerHealth);
+        Debug.Log(targetHealth);
         Debug.Log("wait until next attack");
-        yield return new WaitForSeconds(5);
     }
 }
