@@ -10,23 +10,21 @@ public class Zombie : MonoBehaviour
     public NavMeshAgent agent;
     Rigidbody rig;
     public GameObject[] players;
+    bool playerInRange;
     float AttackDistance = 1.5f;
-    float TimerForNextAttack, Cooldown;
-    int targetHealth;
-    PlayerHealth pHealth;
+    float playerHealth = 100;
     void Awake()
     {
         rig = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         players = GameObject.FindGameObjectsWithTag("Player");
         target = GetClosestEnemy(players).transform;
-        Cooldown = 1;
-        TimerForNextAttack = Cooldown;
+        playerInRange = false;
     }
+
     void FixedUpdate()
     {
-        if (target == null)
-        {
+        if(target == null){
             players = GameObject.FindGameObjectsWithTag("Player");
             target = GetClosestEnemy(players).transform;
         }
@@ -40,15 +38,7 @@ public class Zombie : MonoBehaviour
         else
         {
             // Attack the player
-            if (TimerForNextAttack > 0)
-            {
-                TimerForNextAttack -= Time.deltaTime;
-            }
-            else if (TimerForNextAttack <= 0)
-            {
-                Attack();
-                TimerForNextAttack = Cooldown;
-            }
+            StartCoroutine(Attack());
         }
     }
 
@@ -67,14 +57,13 @@ public class Zombie : MonoBehaviour
                 nearestTarget = potentialTarget;
             }
         }
-        pHealth = nearestTarget.GetComponent<PlayerHealth>();
         return nearestTarget;
     }
-    void Attack()
+    IEnumerator Attack()
     {
-        pHealth.TakeDamage(7);
-        if (targetHealth <= 0)
-        {
+        Debug.Log(playerHealth);
+        playerHealth -= 7;
+        if(playerHealth <= 0){
             // Player is destroyed, ennemy switch target
             Object.Destroy(target.gameObject);
             target = GetClosestEnemy(players).transform;
