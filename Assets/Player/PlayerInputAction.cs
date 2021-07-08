@@ -57,6 +57,22 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Fire1"",
+                    ""type"": ""Button"",
+                    ""id"": ""37c33427-3616-48a7-a942-ae94eda6961f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Fire2"",
+                    ""type"": ""Button"",
+                    ""id"": ""997b9f05-9e70-4038-b07c-067f6e4bfd0f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -74,10 +90,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""651950c7-081d-4d74-bb93-d9ec32da4cca"",
-                    ""path"": ""<XInputController>/leftStick/left"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KONIX;PS4"",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -85,10 +101,43 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""6ee3b058-3b80-44a2-b60b-ea0b2509b9a1"",
-                    ""path"": ""<XInputController>/leftStick/right"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad;KONIX"",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""2578087b-ed5f-44ad-9345-86e9eb17bd85"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""fd08db03-1fa1-4dcf-a641-e5a1ba1aa540"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Horizontal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""7e17da72-9871-4f2e-8d90-b9275ccc5039"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -107,10 +156,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""43a03b01-2f3d-47bc-93a2-3cd43d1cbd3c"",
-                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad;KONIX"",
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -118,10 +167,43 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""74bdfeec-7674-4817-a2a4-7deb7db68571"",
-                    ""path"": ""<XInputController>/leftStick/up"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad;KONIX"",
+                    ""action"": ""Vertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""f2b6081f-9f92-4b0c-9d9f-fa3907a82003"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Vertical"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""982821d0-f639-4830-8a95-c47a85b3443d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Vertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""fc4295b6-1725-4914-8b93-e877dd59294a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -140,10 +222,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""a29a8e6c-bcce-435a-b7d5-99868807ec95"",
-                    ""path"": ""<XInputController>/rightStick/left"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""TurnX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -151,10 +233,43 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""3bbbb85c-5abe-4403-a761-a2c0fb92ae6e"",
-                    ""path"": ""<XInputController>/rightStick/right"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""TurnX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""7774c33f-1422-4ef5-be76-12aea50fe5e8"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurnX"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Negative"",
+                    ""id"": ""6eb78edf-1678-4eda-93e0-dd98b9e5885e"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""TurnX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Positive"",
+                    ""id"": ""9c37e05e-6d37-451c-bf53-d6548f974828"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""TurnX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -173,10 +288,10 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""1460a907-67f5-40cf-affc-28f11587af80"",
-                    ""path"": ""<XInputController>/rightStick/down"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad;KONIX"",
                     ""action"": ""TurnY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -184,10 +299,43 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""587c975d-e462-4481-adb7-9394a788501a"",
-                    ""path"": ""<XInputController>/rightStick/up"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4;KONIX"",
+                    ""groups"": ""Gamepad;KONIX"",
+                    ""action"": ""TurnY"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""b70185fb-578d-4501-b9a7-b4f5b4dd56ee"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurnY"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""f05ea042-29a3-46ca-a4a7-d5a4093e3a97"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""TurnY"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""95ce19c2-d272-42b8-a5d7-162decb6465c"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""TurnY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -195,11 +343,66 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4b930151-8e83-4c00-9101-ef856190c9a1"",
-                    ""path"": ""<XInputController>/leftShoulder"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PS4"",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0241914e-165d-454a-9b80-b3f9cd309a0c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""112cbd92-d6a7-4e4b-a63a-470d85c204b4"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Fire1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c5a69244-f407-492b-9350-5999347da0c0"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Fire1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83db203b-734f-45d9-aa51-8f20db64b022"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Fire2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12cdc1bc-80d0-4a4f-88bd-43a4295803f7"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Fire2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -208,12 +411,22 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""PS4"",
-            ""bindingGroup"": ""PS4"",
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
             ""devices"": [
                 {
-                    ""devicePath"": ""<DualShockGamepad>"",
+                    ""devicePath"": ""<Gamepad>"",
                     ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": true,
                     ""isOR"": false
                 }
             ]
@@ -249,6 +462,8 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         m_Player_TurnX = m_Player.FindAction("TurnX", throwIfNotFound: true);
         m_Player_TurnY = m_Player.FindAction("TurnY", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
+        m_Player_Fire1 = m_Player.FindAction("Fire1", throwIfNotFound: true);
+        m_Player_Fire2 = m_Player.FindAction("Fire2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -303,6 +518,8 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_TurnX;
     private readonly InputAction m_Player_TurnY;
     private readonly InputAction m_Player_Dash;
+    private readonly InputAction m_Player_Fire1;
+    private readonly InputAction m_Player_Fire2;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -312,6 +529,8 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         public InputAction @TurnX => m_Wrapper.m_Player_TurnX;
         public InputAction @TurnY => m_Wrapper.m_Player_TurnY;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
+        public InputAction @Fire1 => m_Wrapper.m_Player_Fire1;
+        public InputAction @Fire2 => m_Wrapper.m_Player_Fire2;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -336,6 +555,12 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                @Fire1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire1;
+                @Fire1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire1;
+                @Fire1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire1;
+                @Fire2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire2;
+                @Fire2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire2;
+                @Fire2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire2;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -355,17 +580,23 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @Fire1.started += instance.OnFire1;
+                @Fire1.performed += instance.OnFire1;
+                @Fire1.canceled += instance.OnFire1;
+                @Fire2.started += instance.OnFire2;
+                @Fire2.performed += instance.OnFire2;
+                @Fire2.canceled += instance.OnFire2;
             }
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-    private int m_PS4SchemeIndex = -1;
-    public InputControlScheme PS4Scheme
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
     {
         get
         {
-            if (m_PS4SchemeIndex == -1) m_PS4SchemeIndex = asset.FindControlSchemeIndex("PS4");
-            return asset.controlSchemes[m_PS4SchemeIndex];
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
     private int m_KONIXSchemeIndex = -1;
@@ -393,5 +624,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         void OnTurnX(InputAction.CallbackContext context);
         void OnTurnY(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnFire1(InputAction.CallbackContext context);
+        void OnFire2(InputAction.CallbackContext context);
     }
 }
