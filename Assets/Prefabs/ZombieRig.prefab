@@ -196,8 +196,6 @@ MonoBehaviour:
   target: {fileID: 1636087883633873504, guid: 3c027a80cd6f2894fada3204387f1858, type: 3}
   speed: 15
   agent: {fileID: 0}
-  players: []
-  playersHealth: []
 --- !u!195 &-7907866861924767339
 NavMeshAgent:
   m_ObjectHideFlags: 0

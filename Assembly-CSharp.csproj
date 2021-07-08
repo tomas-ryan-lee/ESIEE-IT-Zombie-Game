@@ -48,7 +48,6 @@
      <Compile Include="Assets\Spawner.cs" />
      <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
      <Compile Include="Assets\Zombie.cs" />
-     <Compile Include="Assets\NavMeshComponents\Scripts\PlayerHealth.cs" />
      <None Include="Assets\Essential Horror Music Collection\README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
