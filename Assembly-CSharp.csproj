@@ -697,9 +697,6 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/Samantha/Desktop/Zombie_Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/Samantha/Desktop/Zombie_Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
  <HintPath>C:/Users/Samantha/Desktop/Zombie_Game/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
@@ -720,9 +717,6 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Samantha/Desktop/Zombie_Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Samantha/Desktop/Zombie_Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
  <HintPath>C:/Users/Samantha/Desktop/Zombie_Game/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
