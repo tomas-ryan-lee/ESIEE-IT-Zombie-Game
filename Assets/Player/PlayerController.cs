@@ -16,10 +16,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform m_BallSpawnPositionLeft;
     [SerializeField] Transform m_BallSpawnPositionRight;
     [SerializeField] float m_BallStartSpeed;
+    [SerializeField] float m_BallStartSpeedShotGun;
+    [SerializeField] float m_BallStartSpeedSnip;
     [SerializeField] float m_BallLifeDuration;
 
-    [SerializeField] float m_ShootingPeriod;
-    float m_NextShootTime;
+    [SerializeField] float m_ShootingPeriodBase;
+    [SerializeField] float m_ShootingPeriodShotGun;
+    [SerializeField] float m_ShootingPeriodSnip;
+    float m_NextShootTime , m_NextShootTimeShotGun, m_NextShootTimeSnip;
 
 
     bool PlayerDash = false;
@@ -43,12 +47,20 @@ public class PlayerController : MonoBehaviour
         newBallGOFront.transform.position = m_BallSpawnPositionFront.position;
         newBallGOLeft.transform.position = m_BallSpawnPositionLeft.position;
         newBallGORight.transform.position = m_BallSpawnPositionRight.position;
-        newBallGOFront.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionFront.forward * m_BallStartSpeed;
-        newBallGOLeft.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionLeft.forward * m_BallStartSpeed;
-        newBallGORight.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionRight.forward * m_BallStartSpeed;
+        newBallGOFront.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionFront.forward * m_BallStartSpeedShotGun;
+        newBallGOLeft.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionLeft.forward * m_BallStartSpeedShotGun;
+        newBallGORight.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionRight.forward * m_BallStartSpeedShotGun;
         Destroy(newBallGOFront, m_BallLifeDuration);
         Destroy(newBallGOLeft, m_BallLifeDuration);
         Destroy(newBallGORight, m_BallLifeDuration);
+    }
+
+    void ShootSnip()
+    {
+        GameObject newBallGO = Instantiate(m_BallPrefab);
+        newBallGO.transform.position = m_BallSpawnPositionFront.position;
+        newBallGO.GetComponent<Rigidbody>().velocity = m_BallSpawnPositionFront.forward * m_BallStartSpeedSnip;
+        Destroy(newBallGO, m_BallLifeDuration);
     }
 
 
@@ -100,8 +112,7 @@ public class PlayerController : MonoBehaviour
 
         // Mode POSITION & ORIENTATION -> TELEPORTATION
         //// on demande � atteindre une certaine position & orientation
-        Animator animator;
-        Vector3 newRequestedPosY = rb.position + L_AxisY * transform.forward * Speed * Time.fixedDeltaTime;
+        Vector3 newRequestedPosY = rb.position + L_AxisY * transform.forward * Speed * Time.fixedDeltaTime ;
         rb.MovePosition(newRequestedPosY);
         Vector3 newRequestedPosX = rb.position + L_AxisX * transform.right * Speed * Time.fixedDeltaTime;
         rb.MovePosition(newRequestedPosX);
@@ -114,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 dirLook = new Vector3(RightStickInput.x, 0, RightStickInput.y).normalized;
         float rotAngle = R_AxisX * RotationSpeed * Time.fixedDeltaTime;
-        Quaternion qRot = Quaternion.LookRotation(dirLook, transform.up);
+        Quaternion qRot = Quaternion.LookRotation(dirLook, transform.up );
 
 
         //synth�se
@@ -153,7 +164,7 @@ public class PlayerController : MonoBehaviour
         if ( Time.time > m_NextShootTime)
         {
             Shoot1Ball();
-            m_NextShootTime = Time.time + m_ShootingPeriod;
+            m_NextShootTime = Time.time + m_ShootingPeriodBase;
         }
 
     }
@@ -161,10 +172,20 @@ public class PlayerController : MonoBehaviour
     public void OnFire2()
     {
         // FIRE Shotgun
-        if ( Time.time > m_NextShootTime)
+        if ( Time.time > m_NextShootTimeShotGun)
         {
             Shoot3Ball();
-            m_NextShootTime = Time.time + m_ShootingPeriod;
+            m_NextShootTimeShotGun = Time.time + m_ShootingPeriodShotGun;
+        }
+
+    }
+    public void OnFire3()
+    {
+        // FIRE Sniper
+        if (Time.time > m_NextShootTimeSnip)
+        {
+            ShootSnip();
+            m_NextShootTimeSnip = Time.time + m_ShootingPeriodSnip;
         }
 
     }

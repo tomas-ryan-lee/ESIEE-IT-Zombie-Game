@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Fire3",
+                    "type": "Button",
+                    "id": "acab5d39-c192-4152-ba15-53e7ec7a9b96",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -390,6 +398,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Fire2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e0359fe-83da-495a-8632-738d1b883191",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
