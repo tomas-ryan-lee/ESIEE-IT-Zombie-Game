@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
     }
 
     // Update is called once per frame
@@ -112,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Mode POSITION & ORIENTATION -> TELEPORTATION
-        //// on demande à atteindre une certaine position & orientation
+        //// on demande ï¿½ atteindre une certaine position & orientation
         Vector3 newRequestedPosY = rb.position + L_AxisY * transform.forward * Speed * Time.fixedDeltaTime ;
         rb.MovePosition(newRequestedPosY);
         Vector3 newRequestedPosX = rb.position + L_AxisX * transform.right * Speed * Time.fixedDeltaTime;
@@ -129,7 +128,7 @@ public class PlayerController : MonoBehaviour
         Quaternion qRot = Quaternion.LookRotation(dirLook, transform.up );
 
 
-        //synthèse
+        //synthï¿½se
         Quaternion qNewOrientation = qRot * qSlightlyUpright;
         rb.MoveRotation(qRot);
 
