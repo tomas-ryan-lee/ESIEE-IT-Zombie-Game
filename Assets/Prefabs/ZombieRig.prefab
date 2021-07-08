@@ -132,8 +132,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4576186810096880381}
   - component: {fileID: 4576186810089202871}
-  - component: {fileID: 4576186809163820476}
   - component: {fileID: -7907866861924767339}
+  - component: {fileID: 5017342550467472381}
+  - component: {fileID: -3948348235693693643}
   m_Layer: 8
   m_Name: ZombieRig
   m_TagString: Untagged
@@ -181,23 +182,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4576186809163820476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4576186810096457373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f40cb384ef952014aabb93992a8526fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1636087883633873504, guid: 3c027a80cd6f2894fada3204387f1858, type: 3}
-  speed: 15
-  agent: {fileID: 0}
-  players: []
-  playersHealth: []
 --- !u!195 &-7907866861924767339
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -208,7 +192,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -220,6 +204,38 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5017342550467472381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576186810096457373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459b4e120741fc64d8846b01b5c29a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 7362552211815006272, guid: 3c027a80cd6f2894fada3204387f1858, type: 3}
+  speed: 15
+  agent: {fileID: -7907866861924767339}
+  players: []
+--- !u!111 &-3948348235693693643
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576186810096457373}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4427ff7ccdf204f49860d80928896422, type: 3}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 1
+  m_CullingType: 0
 --- !u!1 &4576186810096457375
 GameObject:
   m_ObjectHideFlags: 0

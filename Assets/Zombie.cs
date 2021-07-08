@@ -79,7 +79,5 @@ public class Zombie : MonoBehaviour
             Object.Destroy(target.gameObject);
             target = GetClosestEnemy(players).transform;
         }
-        Debug.Log(targetHealth);
-        Debug.Log("wait until next attack");
     }
 }
